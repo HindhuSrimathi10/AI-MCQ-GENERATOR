@@ -82,7 +82,23 @@ mcq-generator/
 ├── package.json
 └── README.md
 ```
+## Folder Structure Explanation
 
+| Folder/File | Purpose |
+|---|---|
+| `src/config/aiConfig.js` | Stores Groq AI configuration and API setup |
+| `src/controllers/mcqController.js` | Handles API request and response logic |
+| `src/routes/mcqRoutes.js` | Defines API routes/endpoints |
+| `src/services/aiService.js` | Communicates with Groq AI for MCQ generation |
+| `src/utils/fileReader.js` | Reads and extracts content from uploaded Markdown files |
+| `src/app.js` | Main Express application entry point |
+| `tests/mcq.test.js` | Contains unit and integration test cases |
+| `screenshots/` | Stores API response and testing screenshots |
+| `sample-notes.md` | Sample Markdown file for testing |
+| `test.http` | REST Client API testing file |
+| `.env` | Stores environment variables securely |
+| `package.json` | Contains project metadata and dependencies |
+| `README.md` | Project documentation |
 ---
 
 #  Installation
