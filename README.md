@@ -1,10 +1,19 @@
 # AI MCQ Generator API
 
-An AI-powered REST API that automatically generates Multiple Choice Questions (MCQs) from uploaded Markdown study notes using Large Language Models (LLMs).
+> Automatically generate Multiple Choice Questions from your 
+> Markdown study notes using Groq AI
 
-The system accepts `.md` files, extracts the content, sends it to an AI model, and returns structured exam-style MCQs in JSON format.
+---
+##  About the Project
 
-This project was developed as part of the **Phase 01 – AI MCQ Generator API Intern Development Task**.
+The AI MCQ Generator API is a backend REST API that reads
+Markdown study notes uploaded by a user and automatically
+generates structured Multiple Choice Questions using the
+Groq AI model (LLaMA 3.3 70B).
+
+Instead of manually writing exam questions, a student or
+educator can upload their notes and instantly receive
+5 ready-to-use MCQs with options, answers, and explanations.
 
 ---
 
@@ -30,7 +39,7 @@ This project was developed as part of the **Phase 01 – AI MCQ Generator API In
 | Express.js | Web framework and routing      |
 | Groq AI    | LLaMA 3.3 70B — MCQ generation |
 | Multer     | Handles `.md` file uploads     |
-| dotenv     | Manages environment variables  |
+| .env       | Manages environment variables  |
 | Jest       | Unit testing framework         |
 | Supertest  | API integration testing        |
 
@@ -101,7 +110,7 @@ Create a `.env` file in the project root.
 
 ```env
 PORT=3000
-GROQ_API_KEY=your_groq_api_key
+GROQ_API_KEY=groq_api_key
 ```
 
 ---
@@ -130,7 +139,7 @@ http://localhost:3000
 
 #  Usage
 
-## Step 1 — Prepare your Markdown notes file
+## Step 1 — Prepared Markdown notes file
 
 Create a `.md` file with your study notes.
 
@@ -171,13 +180,6 @@ Content-Type: text/markdown
 
 ---
 
-## Step 3 — Or use curl in your terminal
-
-```bash
-curl -X POST http://localhost:3000/api/generate-mcq \
-  -F "file=@sample-notes.md"
-```
-
 ---
 
 #  API Reference
@@ -215,8 +217,6 @@ curl -X POST http://localhost:3000/api/generate-mcq \
   ]
 }
 ```
-
----
 
 #  Response Fields
 
@@ -297,23 +297,9 @@ This project is tested using:
 
 ---
 
-#  Future Improvements
-
-- Difficulty level selection
-- Dynamic MCQ count
-- Authentication and rate limiting
-- Database integration
-- Frontend dashboard
-- PDF and DOCX support
-- Export MCQs as PDF
-
----
-
 #  Author
 
 Developed as part of the **Phase 01 Intern Development Program**.
-
-
 
 ---
 
